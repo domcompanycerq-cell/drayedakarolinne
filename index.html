@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dra. Yeda Karolinne · Otomodelação</title>
+<meta name="description" content="Dra. Yeda Karolinne, otomodelação: remodelação de orelhas sem cirurgia. Agende sua avaliação pelo WhatsApp. Norcon Empresarial, sala 1008, Mangabeiras, Maceió (AL).">
+<meta name="theme-color" content="#CFC3B3">
+<meta property="og:title" content="Dra. Yeda Karolinne · Otomodelação">
+<meta property="og:description" content="Agende sua avaliação pelo WhatsApp.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="assets/poster.jpg">
+<link rel="preload" href="assets/fonts/italiana.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/jost.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"Italiana";src:url("assets/fonts/italiana.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Jost";src:url("assets/fonts/jost.woff2") format("woff2");font-weight:300 600;font-display:swap}
+
+:root{
+  --sand:#CFC3B3;
+  --taupe:#A18A78;
+  --slate:#6A6866;
+  --mist:#ECE5DB;
+  --ink:#2B2725;
+  --ink-soft:#3D3835;
+  --glass:rgba(250,247,242,.66);
+  --glass-hover:rgba(250,247,242,.84);
+  --line:rgba(255,255,255,.65);
+  --ease-out:cubic-bezier(.16,1,.3,1);
+  --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .3 0 0 0 0 .27 0 0 0 0 .24 0 0 0 .4 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html,body{overflow-x:clip}
+html{-webkit-text-size-adjust:100%;scrollbar-color:var(--taupe) transparent;scrollbar-width:thin}
+body{
+  margin:0;min-height:100svh;color:var(--ink);background:var(--sand);
+  font:400 1rem/1.5 "Jost",system-ui,sans-serif;-webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--slate);color:var(--mist)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
+
+/* ---------- animated palette gradient ---------- */
+.sky{position:fixed;inset:0;z-index:-1;overflow:hidden;background:linear-gradient(160deg,var(--mist) 0%,var(--sand) 45%,#BBA999 100%)}
+.sky i{
+  position:absolute;width:75vmax;height:75vmax;border-radius:50%;
+  will-change:transform;animation:drift var(--t,30s) ease-in-out infinite alternate;
+}
+.sky .a{--t:26s;top:-40vmax;left:-30vmax;background:radial-gradient(circle,rgba(236,229,219,.95),rgba(236,229,219,0) 62%)}
+.sky .b{--t:34s;top:-18vmax;right:-30vmax;background:radial-gradient(circle,rgba(161,138,120,.95),rgba(161,138,120,0) 64%);animation-delay:-8s}
+.sky .c{--t:38s;bottom:-40vmax;left:-28vmax;background:radial-gradient(circle,rgba(161,138,120,.7),rgba(161,138,120,0) 62%);animation-delay:-14s}
+.sky .d{--t:30s;bottom:-38vmax;right:-22vmax;background:radial-gradient(circle,rgba(106,104,102,.75),rgba(106,104,102,0) 62%);animation-delay:-20s}
+.sky::after{content:"";position:absolute;inset:0;background-image:var(--grain);opacity:.4}
+@keyframes drift{
+  0%{transform:translate3d(0,0,0) scale(1)}
+  50%{transform:translate3d(18vmax,12vmax,0) scale(1.15)}
+  100%{transform:translate3d(-12vmax,22vmax,0) scale(.92)}
+}
+
+/* ---------- layout ---------- */
+.page{
+  width:min(1120px,100%);min-height:100svh;margin:0 auto;
+  padding:max(26px,env(safe-area-inset-top)) clamp(16px,5vw,56px) max(28px,env(safe-area-inset-bottom));
+  display:grid;align-content:start;gap:22px;grid-template-columns:minmax(0,1fr);
+  grid-template-areas:"head" "mirror" "links" "foot";
+}
+
+.head{grid-area:head;text-align:center}
+.name{
+  margin:0;font-family:"Italiana",serif;font-weight:400;
+  font-size:clamp(2.3rem,6.4vw,5.4rem);line-height:.98;letter-spacing:.005em;text-wrap:balance;
+}
+.lede{margin:.8rem auto 0;max-width:30ch;font-size:clamp(1.15rem,1.75vw,1.45rem);line-height:1.4;color:var(--ink);text-wrap:balance}
+.lede strong{font-weight:500;color:var(--ink)}
+
+/* ---------- video: an arched mirror ---------- */
+.mirror{
+  grid-area:mirror;justify-self:center;position:relative;margin:0;
+  width:min(66vw,calc(46svh * 9 / 16 + 20px),360px);
+  padding:9px;border-radius:999px 999px 30px 30px;
+  border:1px solid var(--line);
+  background:rgba(250,247,242,.22);
+  box-shadow:0 30px 60px -30px rgba(43,39,37,.45),0 10px 22px -14px rgba(43,39,37,.3);
+}
+.mirror-glass{position:relative;aspect-ratio:9/16;overflow:hidden;border-radius:999px 999px 22px 22px;background:var(--slate);isolation:isolate}
+.mirror video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.mirror-glass::after{ /* faint sheen across the glass */
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(125deg,rgba(255,255,255,.18) 0%,rgba(255,255,255,0) 32%,rgba(255,255,255,0) 70%,rgba(255,255,255,.08) 100%);
+}
+.sound{
+  position:absolute;z-index:2;right:12px;bottom:12px;width:44px;height:44px;
+  display:grid;place-items:center;border:1px solid rgba(255,255,255,.55);border-radius:50%;cursor:pointer;
+  color:#fff;background:rgba(43,39,37,.38);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+  transition:background .3s var(--ease-out),transform .3s var(--ease-out);
+}
+.sound:hover{background:rgba(43,39,37,.6)}
+.sound:active{transform:scale(.94)}
+.sound:focus-visible{outline-color:#F7F3EE;outline-offset:3px}
+.sound svg{width:20px;height:20px}
+.sound .on{display:none}
+.sound[aria-pressed="true"] .on{display:block}
+.sound[aria-pressed="true"] .off{display:none}
+.progress{position:absolute;z-index:2;left:22px;right:70px;bottom:32px;height:2px;border-radius:2px;background:rgba(255,255,255,.3);overflow:hidden}
+.progress span{position:absolute;inset:0;background:rgba(255,255,255,.9);transform-origin:left;transform:scaleX(0);transition:transform .3s linear}
+
+/* ---------- links ---------- */
+.links{grid-area:links;list-style:none;margin:0 auto;padding:0;width:min(100%,460px);display:grid;grid-template-columns:minmax(0,1fr);gap:10px}
+.link{
+  display:flex;align-items:center;gap:14px;min-height:64px;padding:10px 18px 10px 10px;
+  border-radius:20px;text-decoration:none;color:var(--ink);
+  background:var(--glass);border:1px solid var(--line);
+  box-shadow:0 1px 0 rgba(255,255,255,.5) inset,0 8px 20px -14px rgba(43,39,37,.35);
+  transition:background .35s var(--ease-out),transform .35s var(--ease-out),box-shadow .35s var(--ease-out);
+}
+.link:hover{background:var(--glass-hover);transform:translateY(-2px);box-shadow:0 1px 0 rgba(255,255,255,.6) inset,0 14px 26px -14px rgba(43,39,37,.4)}
+.link:active{transform:translateY(0) scale(.99)}
+.ico{flex:none;width:44px;height:44px;border-radius:14px;display:grid;place-items:center;color:var(--slate);background:rgba(207,195,179,.55)}
+.ico svg{width:22px;height:22px}
+.txt{flex:1;min-width:0}
+.label{display:block;font-weight:500;font-size:1.05rem;line-height:1.25;letter-spacing:.01em;text-wrap:balance}
+.go{flex:none;width:18px;height:18px;color:var(--slate);opacity:.7;transition:transform .35s var(--ease-out),opacity .35s}
+.link:hover .go{transform:translateX(3px);opacity:1}
+
+.link--primary{min-height:72px;color:#F7F3EE;background:var(--slate);border-color:rgba(255,255,255,.25)}
+.link--primary:hover{background:#5D5B59}
+.link--primary .ico{color:#F7F3EE;background:rgba(255,255,255,.14)}
+.link--primary .label{font-size:1.1rem}
+.nw{white-space:nowrap}
+.link--primary .go{color:#F7F3EE;opacity:.85}
+
+.foot{grid-area:foot;text-align:center;font-size:.8rem;line-height:1.6;color:var(--ink);padding-top:6px}
+.foot > span{display:inline-block;padding:4px 12px;border-radius:999px;background:rgba(250,247,242,.55)} /* keeps the line legible over the darkest drift */
+
+/* ---------- entrance: the mirror alone surfaces ---------- */
+.js .mirror{opacity:0;transform:translateY(16px) scale(.97);transition:opacity 1s var(--ease-out),transform 1.3s var(--ease-out)}
+.js.ready .mirror{opacity:1;transform:none}
+
+/* ---------- desktop ---------- */
+@media (min-width:900px){
+  .page{
+    align-content:center;
+    grid-template-columns:minmax(0,1fr) auto;
+    grid-template-areas:"head mirror" "links mirror" "foot mirror";
+    column-gap:clamp(56px,8vw,128px);row-gap:28px;
+  }
+  .head{text-align:left;align-self:end}
+  .lede{margin-left:0}
+  .links{margin:0;width:min(100%,440px);align-self:start}
+  .foot{text-align:left;align-self:start;padding-top:0}
+  .mirror{width:calc(min(80svh,820px) * 9 / 16 + 20px);padding:11px;align-self:center}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .sky i{animation:none}
+  .js .mirror{opacity:1;transform:none;transition:none}
+  .link,.go,.sound{transition:none}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add("js")</script>
+<div class="sky" aria-hidden="true"><i class="a"></i><i class="b"></i><i class="c"></i><i class="d"></i></div>
+
+<main class="page">
+  <header class="head">
+    <h1 class="name">Dra. Yeda Karolinne</h1>
+    <p class="lede"><strong>Otomodelação</strong> — a harmonia das suas orelhas, sem cirurgia.</p>
+  </header>
+
+  <figure class="mirror" aria-label="Vídeo do consultório">
+    <div class="mirror-glass">
+      <video id="film" src="assets/drayeda.mp4" poster="assets/poster.jpg" autoplay muted loop playsinline preload="metadata"
+        aria-label="Paciente se vendo no espelho após a avaliação com a Dra. Yeda"></video>
+      <div class="progress" aria-hidden="true"><span></span></div>
+      <button class="sound" type="button" aria-pressed="false" aria-controls="film" aria-label="Ativar som">
+        <svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5h3.2L12 5.5v13l-4.8-4H4z"/><path d="m16 9.5 5 5m0-5-5 5"/></svg>
+        <svg class="on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5h3.2L12 5.5v13l-4.8-4H4z"/><path d="M15.5 9a4.2 4.2 0 0 1 0 6M18.2 6.5a8 8 0 0 1 0 11"/></svg>
+      </button>
+    </div>
+  </figure>
+
+  <ul class="links" aria-label="Links">
+    <li>
+      <a class="link link--primary" href="https://api.whatsapp.com/message/W6W7LDQJZFOVP1?autoload=1&amp;app_absent=0&amp;utm_source=ig" target="_blank" rel="noopener">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.7a8.5 8.5 0 0 1-12.4 7.6L3.5 20.5l1.3-4.4a8.5 8.5 0 1 1 15.7-4.4Z"/><path d="M9.2 8.2c-.4 2.9 2.4 6.3 5.6 6.8l1.3-1.3-1.9-1.2-1 .7a4.6 4.6 0 0 1-2.2-2.2l.7-1-1.2-1.9-1.3.1Z"/></svg></span>
+        <span class="txt"><span class="label">Agendar Avaliação</span></span>
+        <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+      </a>
+    </li>
+    <li>
+      <a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Norcon%20Empresarial%2C%20Mangabeiras%2C%20Macei%C3%B3%20-%20AL" target="_blank" rel="noopener">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.8-6.5-11a6.5 6.5 0 0 1 13 0c0 5.2-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.4"/></svg></span>
+        <span class="txt"><span class="label">Localização</span></span>
+        <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+      </a>
+    </li>
+    <li>
+      <a class="link" href="https://www.instagram.com/drayedakarolinne/" target="_blank" rel="noopener">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.1" cy="6.9" r=".6" fill="currentColor"/></svg></span>
+        <span class="txt"><span class="label">Instagram</span></span>
+        <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+      </a>
+    </li>
+    <li>
+      <a class="link" href="https://www.instagram.com/usesofiajoias/" target="_blank" rel="noopener">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5.5" r="2.5"/><path d="M12 8v3.5"/><path d="m12 11.5-3.6 4.7L12 21l3.6-4.8z"/><path d="M8.4 16.2h7.2"/></svg></span>
+        <span class="txt"><span class="label">Sofia Jóias&nbsp;- <span class="nw">Ear &amp; Jewelry Stylist</span></span></span>
+        <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+      </a>
+    </li>
+  </ul>
+
+  <footer class="foot">
+    <span>© <span id="yr">2026</span> Dra. Yeda Karolinne</span>
+  </footer>
+</main>
+
+<script>
+(function(){
+  var root=document.documentElement, film=document.getElementById("film"), btn=document.querySelector(".sound"), bar=document.querySelector(".progress span");
+  document.getElementById("yr").textContent=new Date().getFullYear();
+
+  requestAnimationFrame(function(){requestAnimationFrame(function(){root.classList.add("ready")})});
+
+  function setSound(on){
+    film.muted=!on;
+    if(on){film.play().catch(function(){})}
+    btn.setAttribute("aria-pressed",on?"true":"false");
+    btn.setAttribute("aria-label",on?"Desativar som":"Ativar som");
+  }
+  btn.addEventListener("click",function(){setSound(film.muted)});
+  film.addEventListener("click",function(){setSound(film.muted)});
+
+  film.addEventListener("timeupdate",function(){
+    if(film.duration){bar.style.transform="scaleX("+(film.currentTime/film.duration)+")"}
+  });
+})();
+</script>
+</body>
+</html>
